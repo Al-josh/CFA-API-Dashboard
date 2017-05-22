@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
 import Quote from './Quote/Quote';
+import Weather from './Weather/Weather';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+
       allData: []
     }
   };
@@ -22,6 +24,7 @@ class App extends Component {
   // api call with axios
   // then set the data into our state
   getQuote() {
+
     const URL = 'http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en'
     axios.get(URL)
       .then((response) => {
@@ -35,11 +38,25 @@ class App extends Component {
       });
   };
 
+  getWeather() {
+    console.log('componentDidMount()');
+    const URL = 'http://dataservice.accuweather.com/currentconditions/v1/22889?apikey=WV4TR4tcV6Hb9FTRbbaOINsInJ5fbaV5';
+    axios.get(URL)
+      .then((response) => {
+        // console.log(response.data);
+        this.setState({ allWeather: response.data });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
+
   render() {
     return (
       <div>
         <h1>Personal Dashboard</h1>
           <Quote quoteData={this.state.allData.quoteText}/>
+          <Weather weatherData={this.state.allWeather} />
       </div>
     );
   };
