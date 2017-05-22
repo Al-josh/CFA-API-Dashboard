@@ -8,9 +8,9 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      allData: [],
-      allWeather: [],
-    };
+
+      allData: []
+    }
   };
 
   // different stages in our component that we can hook into
@@ -24,12 +24,14 @@ class App extends Component {
   // api call with axios
   // then set the data into our state
   getQuote() {
-    console.log('componentDidMount()');
-    const URL = 'http://quotes.rest/qod.json';
+
+    const URL = 'http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en'
     axios.get(URL)
       .then((response) => {
+        // console.log("first", this.state.allData)
         // console.log(response.data);
         this.setState({ allData: response.data });
+        // (console.log("second", this.state.allData))
       })
       .catch(function (error) {
         console.log(error);
@@ -50,11 +52,10 @@ class App extends Component {
   };
 
   render() {
-    console.log('render()');
     return (
       <div>
         <h1>Personal Dashboard</h1>
-          <Quote quoteData={this.state.allData} />
+          <Quote quoteData={this.state.allData.quoteText}/>
           <Weather weatherData={this.state.allWeather} />
       </div>
     );
