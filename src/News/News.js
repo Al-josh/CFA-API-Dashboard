@@ -5,7 +5,7 @@ class News extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      allTitles: []
+      allData: [],
     };
   };
 
@@ -21,7 +21,7 @@ class News extends Component {
       // console.log(response.data);
       const articles = response.data.articles;
       this.setState({
-        allTitles: articles,
+        allData: articles,
       });
     })
     .catch(function (error) {
@@ -31,17 +31,12 @@ class News extends Component {
 
   render() {
     return (
-      <ul>
-        {this.state.allTitles.map((data, i) => <li key={i}>{data.title}</li>)}
-
-      </ul>
+      <div>
+        <h3>Current News</h3>
+        {this.state.allData.map((data, i) => <p key={i}>Title: {data.title} <br/> Description: {data.description} <br/> <a href={data.url}>Full Article</a></p>)}
+      </div>
     );
   };
 };
 
-
-// {props.ingredients.map((ingredient, i) => <li key={i}>{ingredient.name} <button onClick={() => props.deleteIngredient(ingredient._id)}>Delete</button></li>)}
-
-
-      // <p>{this.state.allNews.articles === [] ? 'Loading...' : this.state.allNews.articles} </p>
 export default News;

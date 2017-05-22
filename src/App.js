@@ -32,6 +32,8 @@ class App extends Component {
     return (
       <div>
         <h1>Personal Dashboard</h1>
+          <Quote quoteData={this.state.allData.quoteText}/>
+          <Weather />
           <News />
       </div>
     );
