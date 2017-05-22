@@ -3,6 +3,7 @@ import axios from 'axios';
 import './App.css';
 import Quote from './Quote/Quote';
 import Weather from './Weather/Weather';
+import News from './News/News';
 
 class App extends Component {
   constructor(props) {
@@ -32,7 +33,8 @@ class App extends Component {
       <div>
         <h1>Personal Dashboard</h1>
           <Quote quoteData={this.state.allData.quoteText}/>
-          <Weather weatherData={this.state.allWeather} />
+          <Weather />
+          <News />
       </div>
     );
   };
