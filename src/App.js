@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
 import Quote from './Quote/Quote';
+import Weather from './Weather/Weather';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      allData: []
+      allData: [],
+      allWeather: [],
     };
   };
 
@@ -23,11 +25,24 @@ class App extends Component {
   // then set the data into our state
   getQuote() {
     console.log('componentDidMount()');
-    const URL = 'http://quotes.rest/qod.json'
+    const URL = 'http://quotes.rest/qod.json';
     axios.get(URL)
       .then((response) => {
         // console.log(response.data);
         this.setState({ allData: response.data });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
+
+  getWeather() {
+    console.log('componentDidMount()');
+    const URL = 'http://dataservice.accuweather.com/currentconditions/v1/22889?apikey=WV4TR4tcV6Hb9FTRbbaOINsInJ5fbaV5';
+    axios.get(URL)
+      .then((response) => {
+        // console.log(response.data);
+        this.setState({ allWeather: response.data });
       })
       .catch(function (error) {
         console.log(error);
@@ -40,6 +55,7 @@ class App extends Component {
       <div>
         <h1>Personal Dashboard</h1>
           <Quote quoteData={this.state.allData} />
+          <Weather weatherData={this.state.allWeather} />
       </div>
     );
   };
