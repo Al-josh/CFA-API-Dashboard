@@ -11,6 +11,8 @@ import 'react-grid-layout/css/styles.css';
 import 'react-resizable/css/styles.css';
 
 import Quote from './Quote/Quote';
+import Weather from './Weather/Weather';
+import News from './News/News';
 
 // Import calendar component and styles
 // https://intljusticemission.github.io/react-big-calendar/examples/index.html
@@ -28,27 +30,18 @@ class App extends Component {
     this.state = {
       allData: [],
       events: []
-    }
+    };
   };
 
-  // different stages in our component that we can hook into
-  // "once everything is on the page, THEN ..... eg grab data"
   componentDidMount() {
-  // this. has to be used because it has to reference the component we are in
-    this.getQuote()
+    this.getQuote();
   };
 
-  // first point of contact we are getting our data.
-  // api call with axios
-  // then set the data into our state
   getQuote() {
-    const URL = 'http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en'
+    const URL = 'http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en';
     axios.get(URL)
       .then((response) => {
-        // console.log("first", this.state.allData)
-        // console.log(response.data);
         this.setState({ allData: response.data });
-        // (console.log("second", this.state.allData))
       })
       .catch(function (error) {
         console.log(error);
@@ -60,6 +53,7 @@ class App extends Component {
       {i: 'a', x: 0, y: 0, w: 10, h: 2, static: true},
       {i: 'b', x: 0, y: 2, w: 3, h: 2, minW: 2, maxW: 4},
       {i: 'c', x: 0, y: 4, w: 12, h: 20}
+      {i: 'd', x: 0, y: 4, w: 12, h: 20}
     ];
 
     return (
@@ -67,8 +61,9 @@ class App extends Component {
         <h1>Personal Dashboard</h1>
           <ReactGridLayout className="layout" layout={layout} cols={12} rowHeight={30} width={1200}>
             <div key={'a'}><Quote quoteData={this.state.allData.quoteText}/></div>
-            <div key={'b'}>b</div>
+            <div key={'b'}><Weather /></div>
             <div key={'c'}><BigCalendar events={this.state.events} /></div>
+            <div key={'d'}><News /></div>
           </ReactGridLayout>
       </div>
     );
