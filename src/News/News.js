@@ -31,24 +31,28 @@ class News extends Component {
 
   render() {
     return (
-      <div>
-        <h3>Current News</h3>
-        <div className="row">
-        {this.state.allData.map((data, i) =>
-          <div className="col s12 m6">
-            <div className="card blue-grey darken-1">
-              <div className="card-content white-text">
+      <div className="row">
+            {this.state.allData.map((data, i) =>
+        <div className="col s12 m4">
+        <div className="card">
+
+            <div>
+              <div className="card-image">
+                <img src={data.urlToImage}/>
                 <span className="card-title">{data.title}</span>
+              </div>
+              <div className="card-content">
                 <p>{data.description}</p>
               </div>
               <div className="card-action">
-                <a href={data.url}>Full Article</a>
+                <a href={data.url}>Read Full Article</a>
               </div>
             </div>
           </div>
-        )}
         </div>
-      </div>
+          )}
+
+    </div>
     );
   };
 };
