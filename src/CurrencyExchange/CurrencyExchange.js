@@ -31,12 +31,9 @@ class CurrencyExchange extends Component {
   render() {
     return (
       <div className="currencyBox">
-        <h4>Currency Exchange</h4>
         <p>1 AUD = {this.state.currency.EUR} EUR</p>
         <p>1 AUD = {this.state.currency.USD} USD</p>
-        <p>1 AUD = {this.state.currency.CNY} CNY</p>
         <p>1 AUD = {this.state.currency.HKD} HKD</p>
-        <p>1 AUD = {this.state.currency.MYR} MYR</p>
       </div>
     );
   };
