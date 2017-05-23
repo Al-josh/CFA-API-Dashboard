@@ -1,5 +1,3 @@
-
-
 import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
@@ -52,7 +50,7 @@ class App extends Component {
     var layout = [
       {i: 'a', x: 0, y: 0, w: 10, h: 2, static: true},
       {i: 'b', x: 0, y: 2, w: 3, h: 2, minW: 2, maxW: 4},
-      {i: 'c', x: 0, y: 4, w: 12, h: 20}
+      {i: 'c', x: 0, y: 4, w: 12, h: 20},
       {i: 'd', x: 0, y: 4, w: 12, h: 20}
     ];
 
