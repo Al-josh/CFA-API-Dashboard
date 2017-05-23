@@ -3,21 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-<<<<<<< HEAD
     "dotenv": "^4.0.0",
     "jquery": "^3.2.1",
     "jquery-ui": "^1.12.1",
     "lodash": "^4.17.4",
     "moment": "^2.18.1",
-=======
-    "moment": "^2.18.1",
-    "dotenv": "^4.0.0",
->>>>>>> 6be5d05e46a91d63d95118061cf65cb009fea40e
     "react": "^15.5.4",
     "react-big-calendar": "^0.14.0",
     "react-dom": "^15.5.4",
-    "react-grid-layout": "^0.14.6",
-    "react-gridstack": "^0.1.4"
+    "react-grid-layout": "^0.14.6"
   },
   "devDependencies": {
     "react-scripts": "1.0.3"

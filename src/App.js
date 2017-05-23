@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
 
+
 // import module and CSS for resizable, draggable grids
 // https://github.com/STRML/react-grid-layout
 import ReactGridLayout from 'react-grid-layout'
@@ -64,6 +65,8 @@ class App extends Component {
             <div key={'d'}><News /></div>
           </ReactGridLayout>
       </div>
+
+
     );
   };
 };
