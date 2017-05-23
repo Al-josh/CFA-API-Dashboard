@@ -84,12 +84,14 @@ class App extends Component {
       <Row className="noMargin">
 
       <Col s={11} className='grid-example'>
-        <Route exact path="/" component={Greeting}/>
-        <Route path="/news" component={News}/>
-        <Route path="/calendar" component={() => (<BigCalendar events={this.state.events} />)}/>
-        <div key={'b'}><Quote quoteData={this.state.allData.quoteText}/></div>
+        <div className="fullHeight">
+          <Route exact path="/" component={Greeting}/>
+          <Route path="/news" component={News}/>
+          <Route path="/calendar" component={() => (<BigCalendar events={this.state.events} />)}/>
+          {/* <div key={'b'}><Quote quoteData={this.state.allData.quoteText}/></div> */}
           {/* <div key={'c'} className="calendar"><BigCalendar events={this.state.events} /></div> */}
           {/* <div key={'d'}><News /></div> */}
+        </div>
       </Col>
       <Col s={1} className='grid-example sidebar'>
             <div className="sideBarItem sideBarImage"><Forecast/></div>

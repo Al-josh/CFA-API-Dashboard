@@ -2,17 +2,33 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './Greeting.css';
 
+import Quote from '../Quote/Quote';
+
 class Greeting extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      allData: [],
       time: [],
     };
   };
 
   componentDidMount() {
     this.getNews();
+    this.getQuote();
   };
+
+  getQuote() {
+    const URL = 'http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en';
+    axios.get(URL)
+      .then((response) => {
+        this.setState({ allData: response.data });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
+
 
   getNews() {
     console.log('componentDidMount()');
@@ -43,6 +59,7 @@ class Greeting extends Component {
     return (
       <div>
         <p className="greeting">{greeting} <br/> The time is {this.state.time.hours}:{this.state.time.minutes}</p>
+        <Quote quoteData={this.state.allData.quoteText}/>
       </div>
     );
   };
