@@ -10,11 +10,8 @@ import 'react-resizable/css/styles.css';
 
 import Quote from './Quote/Quote';
 import News from './News/News';
-<<<<<<< HEAD
 import Forecast from './Forecast/Forecast';
-=======
 import CurrencyExchange from './CurrencyExchange/CurrencyExchange';
->>>>>>> this will add currency exchange
 
 // Import calendar component and styles
 // https://intljusticemission.github.io/react-big-calendar/examples/index.html
