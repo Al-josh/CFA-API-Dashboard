@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import './Forecast.css';
 
 class Forecast extends Component {
   constructor(props) {
@@ -36,10 +37,9 @@ class Forecast extends Component {
   render() {
     return (
       <div>
-        <img src={`images/${this.state.weatherData.icon}.png`} height="200px" />
-        <p>{this.state.position.timezone}</p>
-        <p>{this.state.weatherData.summary}</p>
-        <p>{this.state.weatherData.temperature} °C</p>
+        <p className="timeZone">{this.state.position.timezone}</p>
+        <img src={`images/${this.state.weatherData.icon}.png`} height="100px" />
+        <p className="weatherText">{this.state.weatherData.summary} <br/> {this.state.weatherData.temperature} °C</p>
       </div>
     )
   }
