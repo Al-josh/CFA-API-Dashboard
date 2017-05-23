@@ -11,6 +11,7 @@ import 'react-resizable/css/styles.css';
 import Quote from './Quote/Quote';
 import Weather from './Weather/Weather';
 import News from './News/News';
+import Forecast from './Forecast/Forecast';
 
 // Import calendar component and styles
 // https://intljusticemission.github.io/react-big-calendar/examples/index.html
@@ -58,10 +59,9 @@ class App extends Component {
       <div>
         <h1>Personal Dashboard</h1>
           <ReactGridLayout className="layout" layout={layout} cols={12} rowHeight={30} width={1200}>
-            <div key={'a'}><Quote quoteData={this.state.allData.quoteText}/></div>
-            <div key={'b'}><Weather /></div>
-            <div key={'c'}><BigCalendar events={this.state.events} /></div>
-            <div key={'d'}><News /></div>
+
+            <div key={'b'}><Forecast /></div>
+
           </ReactGridLayout>
       </div>
     );
