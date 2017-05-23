@@ -13,6 +13,7 @@ import Quote from './Quote/Quote';
 import News from './News/News';
 import Forecast from './Forecast/Forecast';
 import CurrencyExchange from './CurrencyExchange/CurrencyExchange';
+import Greeting from './Greeting/Greeting';
 
 // Import calendar component and styles
 // https://intljusticemission.github.io/react-big-calendar/examples/index.html
@@ -60,6 +61,7 @@ class App extends Component {
     return (
       <div>
         <h1>Personal Dashboard</h1>
+        <Greeting />
           <ReactGridLayout className="layout" layout={layout} cols={12} rowHeight={30} width={1200}>
             <div key={'a'}><Quote quoteData={this.state.allData.quoteText}/></div>
             <div key={'b'}><Forecast /></div>
