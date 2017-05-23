@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
+import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
+import './News.css';
+
 
 class News extends Component {
   constructor(props) {
@@ -33,33 +36,29 @@ class News extends Component {
 
   render() {
     return (
-      <div className="row">
-
+      <MuiThemeProvider>
+        <Card>
+          <AppBar title="Latest News" iconClassNameRight="muidocs-icon-navigation-expand-more" />
+          <CardActions>
+          </CardActions>
+          <CardText expandable={false}>
+            <div className="row">
             {this.state.allData.map((data, i) =>
-              <MuiThemeProvider>
-                <div className="col s12 m4">
-                <div className="card">
-                    <div>
-                      <div className="card-image">
-                        <img src={data.urlToImage}/>
-                        <span className="card-title">{data.title}</span>
-                      </div>
-                      <div className="card-content">
-                        <p>{data.description}</p>
-                      </div>
-                      <div className="card-action">
-                        <a href={data.url}>Read Full Article</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </MuiThemeProvider>
-
+              <div className="col s6 m3">
+                <div>
+                  <img src={data.urlToImage} width="100%"/>
+                  <p className="newsTitle"><strong>{data.title}</strong></p>
+                  <p className="newsDescription">{data.description}</p>
+                  <a href={data.url}><p className="newsLink">Read Full Article</p></a>
+              </div>
+            </div>
           )}
-
-    </div>
-    );
-  };
+        </div>
+          </CardText>
+        </Card>
+      </MuiThemeProvider>
+    )
+  }
 };
 
 export default News;

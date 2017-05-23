@@ -36,7 +36,7 @@ class Forecast extends Component {
   render() {
     return (
       <div>
-        <img src={`images/${this.state.weatherData.icon}.png`} />
+        <img src={`images/${this.state.weatherData.icon}.png`} height="200px" />
         <p>{this.state.position.timezone}</p>
         <p>{this.state.weatherData.summary}</p>
         <p>{this.state.weatherData.temperature} °C</p>

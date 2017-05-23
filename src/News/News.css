@@ -1,0 +1,15 @@
+.newsTitle {
+  height: 47px;
+  border-bottom: 1px solid #00BCD4;
+  text-align: center;
+  overflow: scroll;
+}
+
+.newsDescription {
+  height: 85px;
+  overflow: scroll;
+}
+
+.newsLink {
+
+}
