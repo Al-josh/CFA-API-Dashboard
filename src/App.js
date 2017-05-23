@@ -54,8 +54,8 @@ class App extends Component {
 
   render() {
     var layout = [
-      { i: 'a', x: 0, y: 0, w: 8, h: 4},
-      { i: 'b', x: 0, y: 2, w: 10, h: 5, minW: 2, maxW: 4 },
+      { i: 'a', x: 0, y: 0, w: 12, h: 12},
+      { i: 'b', x: 0, y: 2, w: 12, h: 5, minW: 2, maxW: 4 },
       { i: 'c', x: 0, y: 3, w: 13, h: 15, static: true },
       { i: 'd', x: 0, y: 1, w: 12, h: 20, static: true },
       { i: 'e', x: 0, y: 4, w: 5, h: 8 },
@@ -65,19 +65,19 @@ class App extends Component {
       <Row className="noMargin">
         <Col s={11} className='grid-example'>
           <ReactGridLayout className="layout" layout={layout} cols={12} rowHeight={30} width={1250}>
-            {/* <div key={'a'} className="greeting"><Greeting /></div> */}
-            {/* <div key={'b'}><Quote quoteData={this.state.allData.quoteText}/></div> */}
+            <div key={'a'}><Greeting /></div>
+            <div key={'b'}><Quote quoteData={this.state.allData.quoteText}/></div>
              {/* <div key={'c'} className="calendar"><BigCalendar events={this.state.events} /></div> */}
-             <div key={'d'}><News /></div>
-             {/* <div key={'e'}><CurrencyExchange /></div> */}
+             {/* <div key={'d'}><News /></div> */}
           </ReactGridLayout>
         </Col>
         <Col s={1} className='grid-example sidebar'>
           <div className="sideBarItem sideBarImage"><Forecast/></div>
-          <div className="sideBarItem sideBarItemFirst sideBarImage"><img src="https://maxcdn.icons8.com/Share/icon/p1em/Very_Basic//home1600.png" height="70px"/></div>
-          <div className="sideBarItem sideBarImage"><img src="http://res.cloudinary.com/dzctpgu9d/image/upload/v1495531618/0106-currencies-512_ezvz0j.png" height="70px"/></div>
-          <div className="sideBarItem sideBarImage"><img src="http://res.cloudinary.com/dzctpgu9d/image/upload/v1495531800/calendar-512_d4wava.png" height="70px"/></div>
-          <div className="sideBarItem sideBarImage"><img src="https://cdn3.iconfinder.com/data/icons/basic-mobile-part-2/512/newspaper-512.png" height="70px"/></div>
+          <div className="sideBarItem sideBarItemFirst sideBarImage centreAlign"><img src="https://maxcdn.icons8.com/Share/icon/p1em/Very_Basic//home1600.png" height="70px"/></div>
+          <div className="sideBarItem sideBarImage centreAlign"><img src="http://res.cloudinary.com/dzctpgu9d/image/upload/v1495531800/calendar-512_d4wava.png" height="70px"/></div>
+          <div className="sideBarItem sideBarImage centreAlign"><img src="https://cdn3.iconfinder.com/data/icons/basic-mobile-part-2/512/newspaper-512.png" height="70px"/></div>
+          <div className="sideBarItem sideBarImage centreAlign"><img src="http://res.cloudinary.com/dzctpgu9d/image/upload/v1495531618/0106-currencies-512_ezvz0j.png" height="70px"/></div>
+          <div className="sideBarItem sideBarImage centreAlign"><CurrencyExchange /></div>
         </Col>
       </Row>
     );

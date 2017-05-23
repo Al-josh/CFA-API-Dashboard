@@ -13,16 +13,11 @@
 }
 
 .sideBarItemFirst {
-  margin-top: 190px;
+  margin-top: 130px;
 }
 
 .sideBarImage {
   filter: invert(100%);
-}
-
-.greeting {
-  font-family: 'Raleway', sans-serif;
-  text-align: center;
 }
 
 .calendar {
@@ -32,4 +27,8 @@
 
 .noMargin {
   margin: 0;
+}
+
+.centreAlign {
+  text-align: center;
 }

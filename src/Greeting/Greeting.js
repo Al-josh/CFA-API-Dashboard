@@ -42,11 +42,10 @@ class Greeting extends Component {
 
     return (
       <div>
-        <h1>{greeting} <br/> The time is {this.state.time.hours}:{this.state.time.minutes}</h1>
+        <p className="greeting">{greeting} <br/> The time is {this.state.time.hours}:{this.state.time.minutes}</p>
       </div>
     );
   };
 };
-
 
 export default Greeting;
