@@ -30,7 +30,6 @@ class App extends Component {
     this.state = {
       allData: [],
       events: [],
-      develop: []
     };
   };
 
