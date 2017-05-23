@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Marck+Script|Nothing+You+Could+Do');
+
+/*font-family: 'Kaushan Script', cursive;
+font-family: 'Marck Script', cursive;
+font-family: 'Nothing You Could Do', cursive;*/
+
+.quoteFont {
+  font-family: 'Nothing You Could Do', cursive;
+  font-size: 30px;
+  text-align: center;
+}

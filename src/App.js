@@ -54,7 +54,7 @@ class App extends Component {
   render() {
     var layout = [
       { i: 'a', x: 0, y: 0, w: 12, h: 4},
-      { i: 'b', x: 0, y: 2, w: 3, h: 2, minW: 2, maxW: 4 },
+      { i: 'b', x: 0, y: 2, w: 3, h: 10, minW: 2, maxW: 4 },
       { i: 'c', x: 0, y: 4, w: 12, h: 20 },
       { i: 'd', x: 0, y: 4, w: 12, h: 20 },
       { i: 'e', x: 0, y: 4, w: 5, h: 8 },
@@ -63,8 +63,8 @@ class App extends Component {
     return (
       <Row>
         <Col s={11} className='grid-example'>
-          <h1>Personal Dashboard</h1>
-          <ReactGridLayout className="layout" layout={layout} cols={12} rowHeight={30} width={1200}>
+          <Greeting />
+          <ReactGridLayout className="layout" layout={layout} cols={12} rowHeight={30} width={1400}>
             <div key={'a'}><Quote quoteData={this.state.allData.quoteText}/></div>
              <div key={'b'}><Forecast /></div>
              {/* <div key={'c'}><BigCalendar events={this.state.events} /></div> */}
@@ -77,7 +77,6 @@ class App extends Component {
           <div className="sideBarItem sideBarImage"><img src="http://res.cloudinary.com/dzctpgu9d/image/upload/v1495531618/0106-currencies-512_ezvz0j.png" height="70px"/></div>
           <div className="sideBarItem sideBarImage"><img src="http://res.cloudinary.com/dzctpgu9d/image/upload/v1495531800/calendar-512_d4wava.png" height="70px"/></div>
           <div className="sideBarItem sideBarImage"><img src="https://cdn3.iconfinder.com/data/icons/basic-mobile-part-2/512/newspaper-512.png" height="70px"/></div>
-
         </Col>
       </Row>
     );

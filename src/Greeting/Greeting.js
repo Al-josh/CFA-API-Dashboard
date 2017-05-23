@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import './Greeting.css';
 
 class Greeting extends Component {
   constructor(props) {
@@ -41,8 +42,8 @@ class Greeting extends Component {
 
     return (
       <div>
-        <p>{greeting}, the time is {this.state.time.hours}:{this.state.time.minutes}</p>
-        </div>
+        <h1>{greeting}, the time is {this.state.time.hours}:{this.state.time.minutes}</h1>
+      </div>
     );
   };
 };
