@@ -33,7 +33,21 @@ class News extends Component {
     return (
       <div>
         <h3>Current News</h3>
-        {this.state.allData.map((data, i) => <p key={i}>Title: {data.title} <br/> Description: {data.description} <br/> <a href={data.url}>Full Article</a></p>)}
+        <div className="row">
+        {this.state.allData.map((data, i) =>
+          <div className="col s12 m6">
+            <div className="card blue-grey darken-1">
+              <div className="card-content white-text">
+                <span className="card-title">{data.title}</span>
+                <p>{data.description}</p>
+              </div>
+              <div className="card-action">
+                <a href={data.url}>Full Article</a>
+              </div>
+            </div>
+          </div>
+        )}
+        </div>
       </div>
     );
   };
