@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
 
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import AppBar from 'material-ui/AppBar';
+
 // import module and CSS for resizable, draggable grids
 // https://github.com/STRML/react-grid-layout
 import ReactGridLayout from 'react-grid-layout';
@@ -50,7 +53,7 @@ class App extends Component {
 
   render() {
     var layout = [
-      { i: 'a', x: 0, y: 0, w: 10, h: 2, static: true },
+      { i: 'a', x: 0, y: 0, w: 12, h: 4},
       { i: 'b', x: 0, y: 2, w: 3, h: 2, minW: 2, maxW: 4 },
       { i: 'c', x: 0, y: 4, w: 12, h: 20 },
       { i: 'd', x: 0, y: 4, w: 12, h: 20 },
