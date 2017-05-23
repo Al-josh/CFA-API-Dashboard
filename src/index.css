@@ -3,3 +3,10 @@ body {
   padding: 20px;
   font-family: sans-serif;
 }
+
+.currencyBox {
+  background: linear-gradient(blue, green);
+  padding: 20px;
+  height: 100%;
+  color: white;
+}

@@ -5,13 +5,14 @@ import './App.css';
 
 // import module and CSS for resizable, draggable grids
 // https://github.com/STRML/react-grid-layout
-import ReactGridLayout from 'react-grid-layout'
+import ReactGridLayout from 'react-grid-layout';
 import 'react-grid-layout/css/styles.css';
 import 'react-resizable/css/styles.css';
 
 import Quote from './Quote/Quote';
-import Weather from './Weather/Weather';
 import News from './News/News';
+import Forecast from './Forecast/Forecast';
+import CurrencyExchange from './CurrencyExchange/CurrencyExchange';
 
 // Import calendar component and styles
 // https://intljusticemission.github.io/react-big-calendar/examples/index.html
@@ -28,7 +29,7 @@ class App extends Component {
     super(props);
     this.state = {
       allData: [],
-      events: []
+      events: [],
     };
   };
 
@@ -49,10 +50,11 @@ class App extends Component {
 
   render() {
     var layout = [
-      {i: 'a', x: 0, y: 0, w: 10, h: 2, static: true},
-      {i: 'b', x: 0, y: 2, w: 3, h: 2, minW: 2, maxW: 4},
-      {i: 'c', x: 0, y: 4, w: 12, h: 20},
-      {i: 'd', x: 0, y: 4, w: 12, h: 20}
+      { i: 'a', x: 0, y: 0, w: 10, h: 2, static: true },
+      { i: 'b', x: 0, y: 2, w: 3, h: 2, minW: 2, maxW: 4 },
+      { i: 'c', x: 0, y: 4, w: 12, h: 20 },
+      { i: 'd', x: 0, y: 4, w: 12, h: 20 },
+      { i: 'e', x: 0, y: 4, w: 5, h: 8 },
     ];
 
     return (
@@ -60,9 +62,10 @@ class App extends Component {
         <h1>Personal Dashboard</h1>
           <ReactGridLayout className="layout" layout={layout} cols={12} rowHeight={30} width={1200}>
             <div key={'a'}><Quote quoteData={this.state.allData.quoteText}/></div>
-            <div key={'b'}><Weather /></div>
+            <div key={'b'}><Forecast /></div>
             <div key={'c'}><BigCalendar events={this.state.events} /></div>
             <div key={'d'}><News /></div>
+            <div key={'e'}><CurrencyExchange /></div>
           </ReactGridLayout>
       </div>
 
