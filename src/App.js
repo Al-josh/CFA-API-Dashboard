@@ -31,6 +31,7 @@ class App extends Component {
       allData: [],
       events: [],
       masterbranch: [],
+      developbranch: []
     };
   };
 
