@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Time from 'react-time';
 import axios from 'axios';
 
 class Greeting extends Component {
