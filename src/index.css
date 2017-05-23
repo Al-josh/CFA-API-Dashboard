@@ -1,6 +1,4 @@
 body {
-  margin: 0;
-  padding: 20px;
   font-family: sans-serif;
 }
 
@@ -9,4 +7,10 @@ body {
   padding: 20px;
   height: 100%;
   color: white;
+}
+
+.background {
+  background: url('http://res.cloudinary.com/dzctpgu9d/image/upload/v1495530138/fog-1535201_1280_vvmvtk.jpg');
+  background-size: cover;
+  padding-left: 20px;
 }

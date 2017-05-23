@@ -10,12 +10,12 @@ import AppBar from 'material-ui/AppBar';
 import ReactGridLayout from 'react-grid-layout';
 import 'react-grid-layout/css/styles.css';
 import 'react-resizable/css/styles.css';
+import {Col, Row} from 'react-materialize';
 
 import Quote from './Quote/Quote';
 import News from './News/News';
 import Forecast from './Forecast/Forecast';
 import CurrencyExchange from './CurrencyExchange/CurrencyExchange';
-import Greeting from './Greeting/Greeting';
 
 // Import calendar component and styles
 // https://intljusticemission.github.io/react-big-calendar/examples/index.html
@@ -61,19 +61,25 @@ class App extends Component {
     ];
 
     return (
-      <div>
-        <h1>Personal Dashboard</h1>
-        <Greeting />
+      <Row>
+        <Col s={11} className='grid-example'>
+          <h1>Personal Dashboard</h1>
           <ReactGridLayout className="layout" layout={layout} cols={12} rowHeight={30} width={1200}>
             <div key={'a'}><Quote quoteData={this.state.allData.quoteText}/></div>
-            <div key={'b'}><Forecast /></div>
-            <div key={'c'}><BigCalendar events={this.state.events} /></div>
-            <div key={'d'}><News /></div>
-            <div key={'e'}><CurrencyExchange /></div>
+             <div key={'b'}><Forecast /></div>
+             {/* <div key={'c'}><BigCalendar events={this.state.events} /></div> */}
+             {/* <div key={'d'}><News /></div> */}
+             {/* <div key={'e'}><CurrencyExchange /></div> */}
           </ReactGridLayout>
-      </div>
+        </Col>
+        <Col s={1} className='grid-example sidebar'>
+          <div className="sideBarItem sideBarItemFirst sideBarImage"><img src="https://maxcdn.icons8.com/Share/icon/p1em/Very_Basic//home1600.png" height="70px"/></div>
+          <div className="sideBarItem sideBarImage"><img src="http://res.cloudinary.com/dzctpgu9d/image/upload/v1495531618/0106-currencies-512_ezvz0j.png" height="70px"/></div>
+          <div className="sideBarItem sideBarImage"><img src="http://res.cloudinary.com/dzctpgu9d/image/upload/v1495531800/calendar-512_d4wava.png" height="70px"/></div>
+          <div className="sideBarItem sideBarImage"><img src="https://cdn3.iconfinder.com/data/icons/basic-mobile-part-2/512/newspaper-512.png" height="70px"/></div>
 
-
+        </Col>
+      </Row>
     );
   };
 };
