@@ -56,18 +56,18 @@ class App extends Component {
     var layout = [
       { i: 'a', x: 0, y: 0, w: 8, h: 4},
       { i: 'b', x: 0, y: 2, w: 10, h: 5, minW: 2, maxW: 4 },
-      { i: 'c', x: 0, y: 4, w: 3, h: 8 },
+      { i: 'c', x: 0, y: 3, w: 13, h: 15, static: true },
       { i: 'd', x: 0, y: 4, w: 12, h: 20 },
       { i: 'e', x: 0, y: 4, w: 5, h: 8 },
     ];
 
     return (
-      <Row>
+      <Row className="noMargin">
         <Col s={11} className='grid-example'>
-          <ReactGridLayout className="layout" layout={layout} cols={12} rowHeight={30} width={1200}>
-            <div key={'a'} className="greeting"><Greeting /></div>
-            <div key={'b'}><Quote quoteData={this.state.allData.quoteText}/></div>
-             {/* <div key={'c'}><BigCalendar events={this.state.events} /></div> */}
+          <ReactGridLayout className="layout" layout={layout} cols={12} rowHeight={30} width={1250}>
+            {/* <div key={'a'} className="greeting"><Greeting /></div> */}
+            {/* <div key={'b'}><Quote quoteData={this.state.allData.quoteText}/></div> */}
+             <div key={'c'} className="calendar"><BigCalendar events={this.state.events} /></div>
              {/* <div key={'d'}><News /></div> */}
              {/* <div key={'e'}><CurrencyExchange /></div> */}
           </ReactGridLayout>
