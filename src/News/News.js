@@ -37,25 +37,20 @@ class News extends Component {
   render() {
     return (
       <MuiThemeProvider>
-        <Card>
-          <AppBar title="Latest News" iconClassNameRight="muidocs-icon-navigation-expand-more" />
-          <CardActions>
-          </CardActions>
-          <CardText expandable={false}>
+          <div className="newsCard">
             <div className="row">
             {this.state.allData.map((data, i) =>
-              <div className="col s6 m3">
+              <div className="col s6 m4">
                 <div>
-                  <img src={data.urlToImage} width="100%"/>
+                  <img src={data.urlToImage} width="100%" height="150px"/>
                   <p className="newsTitle"><strong>{data.title}</strong></p>
                   <p className="newsDescription">{data.description}</p>
                   <a href={data.url}><p className="newsLink">Read Full Article</p></a>
+                </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
-          </CardText>
-        </Card>
       </MuiThemeProvider>
     )
   }
