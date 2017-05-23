@@ -16,6 +16,7 @@ import Quote from './Quote/Quote';
 import News from './News/News';
 import Forecast from './Forecast/Forecast';
 import CurrencyExchange from './CurrencyExchange/CurrencyExchange';
+import Greeting from './Greeting/Greeting';
 
 // Import calendar component and styles
 // https://intljusticemission.github.io/react-big-calendar/examples/index.html
