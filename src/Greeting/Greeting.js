@@ -42,7 +42,7 @@ class Greeting extends Component {
 
     return (
       <div>
-        <h1>{greeting}, the time is {this.state.time.hours}:{this.state.time.minutes}</h1>
+        <h1>{greeting} <br/> The time is {this.state.time.hours}:{this.state.time.minutes}</h1>
       </div>
     );
   };
