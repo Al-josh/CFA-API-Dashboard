@@ -32,3 +32,33 @@
 .centreAlign {
   text-align: center;
 }
+
+.fullHeight {
+  height: 100%;
+}
+
+.newsCard {
+  height: 90vh;
+  overflow: scroll;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  border-radius: 1%;
+}
+
+.newsTitle {
+  height: 47px;
+  border-bottom: 1px solid #C0D4EC;
+  text-align: center;
+  overflow: scroll;
+}
+
+.newsDescription {
+  height: 85px;
+  overflow: scroll;
+  text-align: justify;
+}
+
+.newsLink {
+  color: black;
+  text-align: center;
+}

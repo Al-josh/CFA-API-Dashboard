@@ -14,7 +14,8 @@
     "react-dom": "^15.5.4",
     "react-forecast": "0.0.7",
     "react-grid-layout": "^0.14.6",
-    "react-materialize": "^0.18.4"
+    "react-materialize": "^0.18.4",
+    "react-router-dom": "^4.1.1"
   },
   "devDependencies": {
     "react-scripts": "1.0.3"
