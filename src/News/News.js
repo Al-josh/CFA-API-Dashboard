@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import AppBar from 'material-ui/AppBar';
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import './News.css';
 
 
@@ -42,7 +40,7 @@ class News extends Component {
             {this.state.allData.map((data, i) =>
               <div className="col s6 m4">
                 <div>
-                  <img src={data.urlToImage} width="100%" height="150px"/>
+                  <img alt="" src={data.urlToImage} width="100%" height="150px"/>
                   <p className="newsTitle"><strong>{data.title}</strong></p>
                   <p className="newsDescription">{data.description}</p>
                   <a href={data.url}><p className="newsLink">Read Full Article</p></a>

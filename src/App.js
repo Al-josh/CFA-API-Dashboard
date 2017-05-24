@@ -9,17 +9,12 @@ import {
 import axios from 'axios';
 import './App.css';
 
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import AppBar from 'material-ui/AppBar';
-
 // import module and CSS for resizable, draggable grids
 // https://github.com/STRML/react-grid-layout
-import ReactGridLayout from 'react-grid-layout';
 import 'react-grid-layout/css/styles.css';
 import 'react-resizable/css/styles.css';
 import {Col, Row} from 'react-materialize';
 
-import Quote from './Quote/Quote';
 import News from './News/News';
 import Forecast from './Forecast/Forecast';
 import CurrencyExchange from './CurrencyExchange/CurrencyExchange';
@@ -134,18 +129,17 @@ class App extends Component {
         <Row className="noMargin">
           <Col s={11} className='grid-example'>
             <div className="fullHeight">
-            <Route exact path="/" component={Greeting}/>
-            <Route path="/news" component={News}/>
-
+              <Route exact path="/" component={Greeting}/>
+              <Route path="/news" component={News}/>
               <Route path="/calendar" component={() => (<BigCalendar events={this.state.events} />)}/>
             </div>
           </Col>
           <Col s={1} className='grid-example sidebar'>
             <div className="sideBarItem sideBarImage"><Forecast/></div>
-            <div className="sideBarItem sideBarItemFirst sideBarImage centreAlign"><Link to="/"><img src="https://maxcdn.icons8.com/Share/icon/p1em/Very_Basic//home1600.png" height="70px"/></Link></div>
-            <div className="sideBarItem sideBarImage centreAlign"><Link to="/calendar"><img src="http://res.cloudinary.com/dzctpgu9d/image/upload/v1495531800/calendar-512_d4wava.png" height="70px"/></Link></div>
-            <div className="sideBarItem sideBarImage centreAlign"><Link to="/news"><img src="https://cdn3.iconfinder.com/data/icons/basic-mobile-part-2/512/newspaper-512.png" height="70px"/></Link></div>
-            <div className="sideBarItem sideBarImage centreAlign"><img src="http://res.cloudinary.com/dzctpgu9d/image/upload/v1495531618/0106-currencies-512_ezvz0j.png" height="70px"/></div>
+            <div className="sideBarItem sideBarItemFirst sideBarImage centreAlign"><Link to="/"><img alt="" src="https://maxcdn.icons8.com/Share/icon/p1em/Very_Basic//home1600.png" height="70px"/></Link></div>
+            <div className="sideBarItem sideBarImage centreAlign"><Link to="/calendar"><img alt="" src="http://res.cloudinary.com/dzctpgu9d/image/upload/v1495531800/calendar-512_d4wava.png" height="70px"/></Link></div>
+            <div className="sideBarItem sideBarImage centreAlign"><Link to="/news"><img alt="" src="https://cdn3.iconfinder.com/data/icons/basic-mobile-part-2/512/newspaper-512.png" height="70px"/></Link></div>
+            <div className="sideBarItem sideBarImage centreAlign"><img alt="" src="http://res.cloudinary.com/dzctpgu9d/image/upload/v1495531618/0106-currencies-512_ezvz0j.png" height="70px"/></div>
             <div className="sideBarItem sideBarImage centreAlign"><CurrencyExchange /></div>
           </Col>
         </Row>

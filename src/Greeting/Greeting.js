@@ -20,7 +20,7 @@ class Greeting extends Component {
   };
 
   componentDidMount() {
-    this.getNews();
+    this.getTime();
     this.getQuote();
   };
 
@@ -36,7 +36,7 @@ class Greeting extends Component {
   };
 
 
-  getNews() {
+  getTime() {
     console.log('componentDidMount()');
     const URL = "https://script.googleusercontent.com/macros/echo?user_content_key=IzdyRWHG_f_Pm0SRoIAimsBi6igTtQ5rCWp4IoGJt6Y-sU1dhNV9i0wK6rgstihd9UC2C88hsKATYDN0N4L8Nd6XrE-FYkE3m5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnJ9GRkcRevgjTvo8Dc32iw_BLJPcPfRdVKhJT5HNzQuXEeN3QFwl2n0M6ZmO-h7C6bwVq0tbM60-hWoa2zNWdermN87Htdh8QiuK637xZnZw&lib=MwxUjRcLr2qLlnVOLh12wSNkqcO1Ikdrk";
     axios.get(URL)
@@ -63,8 +63,8 @@ class Greeting extends Component {
     }
 
     var layout = [
-      { i: 'a', x: 0, y: 0, w: 11, h: 12},
-      { i: 'b', x: 0, y: 12, w: 11, h: 5, minW: 2, maxW: 4 },
+      { i: 'a', x: 0, y: 0, w: 12, h: 12 },
+      { i: 'b', x: 0, y: 12, w: 12, h: 5 },
     ];
 
     return (
