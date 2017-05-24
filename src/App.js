@@ -133,9 +133,10 @@ class App extends Component {
       <Router>
         <Row className="noMargin">
           <Col s={11} className='grid-example'>
+            <div className="fullHeight">
             <Route exact path="/" component={Greeting}/>
             <Route path="/news" component={News}/>
-            <div className="fullHeight">
+
               <Route path="/calendar" component={() => (<BigCalendar events={this.state.events} />)}/>
             </div>
           </Col>

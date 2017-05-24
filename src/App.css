@@ -25,6 +25,11 @@
   /*filter: invert(40%);*/
 }
 
+.fullHeight {
+  height: 70vh;
+  margin-top: 50px;
+}
+
 .noMargin {
   margin: 0;
 }
