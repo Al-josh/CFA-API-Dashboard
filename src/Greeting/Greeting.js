@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './Greeting.css';
 
+// import module and CSS for resizable, draggable grids
+// https://github.com/STRML/react-grid-layout
+import ReactGridLayout from 'react-grid-layout';
+import 'react-grid-layout/css/styles.css';
+import 'react-resizable/css/styles.css';
+
 import Quote from '../Quote/Quote';
 
 class Greeting extends Component {
@@ -56,10 +62,17 @@ class Greeting extends Component {
       greeting = 'Good evening';
     }
 
+    var layout = [
+      { i: 'a', x: 0, y: 0, w: 11, h: 12},
+      { i: 'b', x: 0, y: 12, w: 11, h: 5, minW: 2, maxW: 4 },
+    ];
+
     return (
       <div>
-        <p className="greeting">{greeting} <br/> The time is {this.state.time.hours}:{this.state.time.minutes}</p>
-        <Quote quoteData={this.state.allData.quoteText}/>
+        <ReactGridLayout className="layout" layout={layout} cols={12} rowHeight={30} width={1200}>
+          <div key={'a'}><p className="greeting">{greeting} <br/> The time is {this.state.time.hours}:{this.state.time.minutes}</p></div>
+          <div key={'b'}><Quote quoteData={this.state.allData.quoteText}/></div>
+        </ReactGridLayout>
       </div>
     );
   };
