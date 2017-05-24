@@ -12,13 +12,12 @@ class Forecast extends Component {
   }
 
   componentDidMount() {
-    this.getNews();
+    this.getForecast();
   };
 
-  getNews() {
-    console.log('componentDidMount()');
-    // const URL = "https://api.darksky.net/forecast/007308c46a24e046de02d126ef40d0b9/-33.86,151.21";
-    const URL = "https://api.darksky.net/forecast/007308c46a24e046de02d126ef40d0b9/-33.86,151.21?units=auto"
+  getForecast() {
+    const weatherAPI = process.env.REACT_APP_WEATHER_API
+    const URL = weatherAPI
     axios.get(URL)
     .then((response) => {
       // console.log(response.data);

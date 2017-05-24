@@ -17,8 +17,9 @@ class News extends Component {
   };
 
   getNews() {
+    const newsAPI = process.env.REACT_APP_NEWS_API;
     console.log('componentDidMount()');
-    const URL = "https://newsapi.org/v1/articles?source=techcrunch&apiKey=7cba8aeaad16479c8c9cc6fc6ba0c4c1";
+    const URL = newsAPI;
     axios.get(URL)
     .then((response) => {
       // console.log(response.data);
