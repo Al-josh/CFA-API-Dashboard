@@ -6,7 +6,6 @@ import {
   Link
 } from 'react-router-dom'
 
-
 import axios from 'axios';
 import './App.css';
 
@@ -42,75 +41,75 @@ class App extends Component {
     this.state = {
       allData: [],
       events: [
-  {
-    'title': 'All Day Event',
-    'allDay': true,
-    'start': new Date(2017, 5, 0),
-    'end': new Date(2017, 5, 1)
-  },
-  {
-    'title': 'Long Event',
-    'start': new Date(2017, 5, 7),
-    'end': new Date(2017, 5, 10)
-  },
+        {
+          'title': 'All Day Event',
+          'allDay': true,
+          'start': new Date(2017, 5, 0),
+          'end': new Date(2017, 5, 1)
+        },
+        {
+          'title': 'Long Event',
+          'start': new Date(2017, 5, 7),
+          'end': new Date(2017, 5, 10)
+        },
 
-  {
-    'title': 'DTS STARTS',
-    'start': new Date(2017, 5, 13, 0, 0, 0),
-    'end': new Date(2017, 5, 20, 0, 0, 0)
-  },
+        {
+          'title': 'DTS STARTS',
+          'start': new Date(2017, 5, 13, 0, 0, 0),
+          'end': new Date(2017, 5, 20, 0, 0, 0)
+        },
 
-  {
-    'title': 'DTS ENDS',
-    'start': new Date(2017, 10, 6, 0, 0, 0),
-    'end': new Date(2017, 10, 13, 0, 0, 0)
-  },
+        {
+          'title': 'DTS ENDS',
+          'start': new Date(2017, 10, 6, 0, 0, 0),
+          'end': new Date(2017, 10, 13, 0, 0, 0)
+        },
 
-  {
-    'title': 'Some Event',
-    'start': new Date(2017, 5, 9, 0, 0, 0),
-    'end': new Date(2017, 5, 9, 0, 0, 0)
-  },
-  {
-    'title': 'Conference',
-    'start': new Date(2017, 5, 11),
-    'end': new Date(2017, 5, 13),
-    desc: 'Big conference for important people'
-  },
-  {
-    'title': 'Meeting',
-    'start': new Date(2017, 5, 12, 10, 30, 0, 0),
-    'end': new Date(2017, 5, 12, 12, 30, 0, 0),
-    desc: 'Pre-meeting meeting, to prepare for the meeting'
-  },
-  {
-    'title': 'Lunch',
-    'start':new Date(2017, 5, 12, 12, 0, 0, 0),
-    'end': new Date(2017, 5, 12, 13, 0, 0, 0),
-    desc: 'Power lunch'
-  },
-  {
-    'title': 'Meeting',
-    'start':new Date(2017, 5, 12,14, 0, 0, 0),
-    'end': new Date(2017, 5, 12,15, 0, 0, 0)
-  },
-  {
-    'title': 'Happy Hour',
-    'start':new Date(2017, 5, 12, 17, 0, 0, 0),
-    'end': new Date(2017, 5, 12, 17, 30, 0, 0),
-    desc: 'Most important meal of the day'
-  },
-  {
-    'title': 'Dinner',
-    'start':new Date(2017, 5, 12, 20, 0, 0, 0),
-    'end': new Date(2017, 5, 12, 21, 0, 0, 0)
-  },
-  {
-    'title': 'Birthday Party',
-    'start':new Date(2017, 5, 13, 7, 0, 0),
-    'end': new Date(2017, 5, 13, 10, 30, 0)
-  }
-],
+        {
+          'title': 'Some Event',
+          'start': new Date(2017, 5, 9, 0, 0, 0),
+          'end': new Date(2017, 5, 9, 0, 0, 0)
+        },
+        {
+          'title': 'Conference',
+          'start': new Date(2017, 5, 11),
+          'end': new Date(2017, 5, 13),
+          desc: 'Big conference for important people'
+        },
+        {
+          'title': 'Meeting',
+          'start': new Date(2017, 5, 12, 10, 30, 0, 0),
+          'end': new Date(2017, 5, 12, 12, 30, 0, 0),
+          desc: 'Pre-meeting meeting, to prepare for the meeting'
+        },
+        {
+          'title': 'Lunch',
+          'start':new Date(2017, 5, 12, 12, 0, 0, 0),
+          'end': new Date(2017, 5, 12, 13, 0, 0, 0),
+          desc: 'Power lunch'
+        },
+        {
+          'title': 'Meeting',
+          'start':new Date(2017, 5, 12,14, 0, 0, 0),
+          'end': new Date(2017, 5, 12,15, 0, 0, 0)
+        },
+        {
+          'title': 'Happy Hour',
+          'start':new Date(2017, 5, 12, 17, 0, 0, 0),
+          'end': new Date(2017, 5, 12, 17, 30, 0, 0),
+          desc: 'Most important meal of the day'
+        },
+        {
+          'title': 'Dinner',
+          'start':new Date(2017, 5, 12, 20, 0, 0, 0),
+          'end': new Date(2017, 5, 12, 21, 0, 0, 0)
+        },
+        {
+          'title': 'Birthday Party',
+          'start':new Date(2017, 5, 13, 7, 0, 0),
+          'end': new Date(2017, 5, 13, 10, 30, 0)
+        }
+      ],
     };
   };
 
@@ -129,31 +128,16 @@ class App extends Component {
       });
   };
 
-
-
   render() {
-    var layout = [
-      { i: 'a', x: 0, y: 0, w: 12, h: 12},
-      { i: 'b', x: 0, y: 2, w: 12, h: 5, minW: 2, maxW: 4 },
-      { i: 'c', x: 0, y: 3, w: 13, h: 15, static: true },
-      { i: 'd', x: 0, y: 1, w: 12, h: 20, static: true },
-      { i: 'e', x: 0, y: 4, w: 5, h: 8 },
-    ];
-
     return (
       <Router>
         <Row className="noMargin">
           <Col s={11} className='grid-example'>
-
-              <Route exact path="/" component={Greeting}/>
-              <Route path="/news" component={News}/>
-              <div className="fullHeight">
+            <Route exact path="/" component={Greeting}/>
+            <Route path="/news" component={News}/>
+            <div className="fullHeight">
               <Route path="/calendar" component={() => (<BigCalendar events={this.state.events} />)}/>
-              </div>
-              {/* <div key={'b'}><Quote quoteData={this.state.allData.quoteText}/></div> */}
-              {/* <div key={'c'} className="calendar"><BigCalendar events={this.state.events} /></div> */}
-              {/* <div key={'d'}><News /></div> */}
-
+            </div>
           </Col>
           <Col s={1} className='grid-example sidebar'>
             <div className="sideBarItem sideBarImage"><Forecast/></div>
