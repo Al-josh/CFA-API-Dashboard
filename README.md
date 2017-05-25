@@ -9,7 +9,7 @@ A Personal Dashboard built with react, displaying information called from APIs f
 
 ----------
 
-###Getting Started
+### Getting Started
 
 In your terminal enter the following commands to start a new react project:
 ```
@@ -18,7 +18,7 @@ cd my-app/
 npm start
 ```
 
-###APIs Used
+### APIs Used
 
 | API	 |  	  | Website  |
 | ------ | ------ | -----: |
@@ -30,7 +30,7 @@ npm start
 
 ----------
 
-###Packages Installed
+### Packages Installed
 
 >- react-materialize : styling
 >- react-big-calendar : calendar
@@ -39,13 +39,13 @@ npm start
 
 ----------
 
-###Resources
+### Resources
 
 https://github.com/STRML/react-grid-layout
 
 ----------
 
-####Collaborators
+#### Collaborators
 
 [Aljosa](https://github.com/Al-josh)
 [Kirsten](https://github.com/kirstenfrager)
